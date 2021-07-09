@@ -83,10 +83,11 @@ def main():
     model = ResNet18()
     out = model(y)
 
+    print(model)   #打印网络的结构
 
     for name, para in model.named_parameters():
-        print('ResBlk parameters: ', name)
-        print('Size: ', para.size())
+        print('ResBlk parameters: ', name) #打印网络各个节点的名称
+        print('Size: ', para.size()) #打印网络该节点参数的数量
 
 if __name__ == '__main__':
     main()
